@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import Navbar from "./components/Navbar.js"
 import Filter from "./components/Filter.js"
 import Cards from "./components/Cards.js"
@@ -23,6 +24,7 @@ useEffect( () => {
   }
   fetchData();
 }, []);
+
   return (
     <div>
       <Navbar></Navbar>

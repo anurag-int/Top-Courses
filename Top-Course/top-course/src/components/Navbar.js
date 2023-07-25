@@ -1,11 +1,13 @@
+import React from "react";
 
-function Navbar()
-{
+const Navbar = () => {
     return (
-
-        <nav>
-            <h1>Top Courses</h1>
-        </nav>
+        <div>
+            <nav>
+                <h1>Top Courses</h1>
+            </nav>
+        </div>
+        
     )
 }
 

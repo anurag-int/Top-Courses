@@ -1,9 +1,12 @@
+ 
+import React from "react";
+
 const Filter = ({filterData}) => {
     return(
         <div>
             {filterData.map((data) => {
                 return(
-                    <button>{data.tittle}</button>
+                    <button key={data.id}>{data.title}</button>
                 )
             })}
         </div>
