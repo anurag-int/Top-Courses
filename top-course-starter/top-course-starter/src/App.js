@@ -30,7 +30,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div> 
         <div>
           <Navbar></Navbar>
         </div>
@@ -42,7 +42,7 @@ const App = () => {
         {/* if the cards are in await then till that time we need to use loading screen(scroll) */}
         <div>
           {
-            loading ? (<Spinner></Spinner>) : (<Cards></Cards>)
+            loading ? (<Spinner></Spinner>) : (<Cards courses={courses} > </Cards>)
           }
         </div>
     </div>
