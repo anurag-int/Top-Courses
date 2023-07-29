@@ -16,7 +16,7 @@ const App = () => {
     try{
         let response = await fetch(apiUrl);
         let output = await response.json();
-        setCourses(output);
+        setCourses(output.data);
       }
     catch(err)
     {
@@ -24,7 +24,7 @@ const App = () => {
     }
     setLoading(false);
   }
-
+  
   useEffect(()=>{
     fetchData();
   }, []);
@@ -38,8 +38,6 @@ const App = () => {
         <div>
           <Filter filterData={filterData}/>
         </div>
-
-        {/* if the cards are in await then till that time we need to use loading screen(scroll) */}
         <div>
           {
             loading ? (<Spinner></Spinner>) : (<Cards courses={courses} > </Cards>)
